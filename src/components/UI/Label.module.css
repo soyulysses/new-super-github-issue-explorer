@@ -1,7 +1,13 @@
 .label {
     background: #80808020;
     color: #FFFFFF;
-    border-radius: 99px;
-    padding: 2px 12px;
+    border-radius: 128px;
+    padding: 2px 8px;
     border: 2px #808080 dashed;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height:1.6;
 }

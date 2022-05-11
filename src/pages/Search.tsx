@@ -1,10 +1,11 @@
 import React, {Fragment} from "react";
-import Header from "../components/UI/Header";
+import BasePage from "../components/Common/BasePage";
 
-const Search = (props: any) => {
+const Search = () => {
   return (
     <Fragment>
-      <Header />
+      <BasePage>
+      </BasePage>
     </Fragment>
   )
 }

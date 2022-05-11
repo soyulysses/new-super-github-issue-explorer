@@ -1,0 +1,21 @@
+.IssueTitle {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+
+    color: #FFFFFF;
+
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.IssueTitle > a {
+    color: #FFFFFF;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 3px;
+}
+
+.IssueTitle > a:hover {
+    text-decoration-color: white;
+}

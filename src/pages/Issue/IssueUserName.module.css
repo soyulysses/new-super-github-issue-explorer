@@ -1,0 +1,8 @@
+.IssueUserName {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    word-wrap: break-word;
+    word-break: break-word;
+}

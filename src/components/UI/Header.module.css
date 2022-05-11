@@ -1,8 +1,8 @@
 .header {
     position: relative;
     height: 64px;
-    background-color: #262626;
-    border-bottom: 2px solid #ffffff;
+    width: 100%;
+    border-bottom: 2px dotted #ffffff;
     color: #ffffff;
     display: flex;
     justify-content: center;
@@ -48,8 +48,8 @@
 .header_button {
     border: none;
     background-color: rgba(255,255,255,.15);
-    color: white;
-    padding: 12px 12px;
+    color: white!important;
+    padding: 6px 12px;
     border-radius: 8px;
     text-decoration: none;
 
