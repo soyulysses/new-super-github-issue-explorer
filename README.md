@@ -1,4 +1,4 @@
-# New Super Github Issue Explorer
+# `New Super` Github Issue Explorer
 
 This project is a redo of another project called "Github Issue Explorer".
 
