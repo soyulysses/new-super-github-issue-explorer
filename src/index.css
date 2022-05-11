@@ -24,8 +24,8 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  white-space:pre !important;
 }
 
 *,
@@ -48,6 +48,7 @@ img {
 a {
   text-decoration-style: dotted;
   text-decoration-thickness: 2px;
+  word-break: break-word;
 }
 
 a:link {
@@ -56,4 +57,8 @@ a:link {
 
 a:visited {
   color: #a16c37;
+}
+
+pre {
+  overflow-x: scroll;
 }

@@ -7,7 +7,7 @@ const IssueTitle = (props: any) => {
   return (
     <Fragment>
       <h2 className={classes.IssueTitle}>
-        <Label border-line square color={(props.type === IssueType.ISSUE) ? 'ff6f61' : '00a1ff'} name={(props.type === IssueType.ISSUE) ? '⚠️ Issue' : '📦 Pull Request'} />
+        <Label solid square color={(props.type === IssueType.ISSUE) ? 'ff6f61' : '00a1ff'} name={(props.type === IssueType.ISSUE) ? '⚠️ Issue' : '📦 Pull Request'} />
         <a href={props.url}>{props.title}</a>
       </h2>
     </Fragment>

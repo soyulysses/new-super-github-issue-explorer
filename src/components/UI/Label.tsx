@@ -7,7 +7,7 @@ const Label = (props: any) => {
     backgroundColor: (!!props.color)  ? `#${props.color}30` : '',
     borderColor:     (!!props.color)  ? `#${props.color}` : '',
     borderRadius:    (!!props.square) ? '8px' : '',
-    borderStyle:     (!!props['border-line']) ? 'solid' : ''
+    borderStyle:     (!!props.solid) ? 'solid' : ''
   }
 
   return(

@@ -5,7 +5,6 @@
     border: 2px #FF6F61 dotted;
     color: white;
     width: 100%;
-    word-wrap: anywhere;
     background-color: #262626;
 
     animation: card-appear 200ms ease-out forwards;
@@ -37,6 +36,7 @@
 .Card * {
     margin: 0;
     word-wrap: break-word;
+    white-space:pre-wrap;
 }
 
 pre {
