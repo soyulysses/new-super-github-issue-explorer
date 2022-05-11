@@ -1,7 +1,7 @@
-import Label from "../../components/UI/Label";
-import React, {Fragment} from "react";
-import classes from "./IssueTitle.module.css";
-import {IssueType} from "../Issue";
+import Label from "../../components/UI/Label"
+import React, {Fragment} from "react"
+import classes from "./IssueTitle.module.css"
+import {IssueType} from "../Issue"
 
 const IssueTitle = (props: any) => {
   return (

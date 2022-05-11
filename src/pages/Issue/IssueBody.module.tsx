@@ -1,5 +1,5 @@
-import classes from "./IssueBody.module.css";
-import React from "react";
+import classes from "./IssueBody.module.css"
+import React from "react"
 
 const IssueBody = (props:any) => {
   return (

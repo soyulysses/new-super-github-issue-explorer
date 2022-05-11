@@ -1,6 +1,6 @@
-import React, {Fragment} from "react";
-import {Link} from "react-router-dom";
-import BasePage from "../components/Common/BasePage";
+import React, {Fragment} from "react"
+import {Link} from "react-router-dom"
+import BasePage from "../components/Common/BasePage"
 
 const NoMatch = () => {
   return (

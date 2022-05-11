@@ -1,15 +1,15 @@
-import React, {Fragment, useEffect, useState} from "react";
-import classes from "../components/UI/Header.module.css";
-import {Link, useNavigate, useParams} from "react-router-dom";
-import Card from "../components/UI/Card";
-import Label from "../components/UI/Label";
+import React, {Fragment, useEffect, useState} from "react"
+import classes from "../components/UI/Header.module.css"
+import {Link, useNavigate, useParams} from "react-router-dom"
+import Card from "../components/UI/Card"
+import Label from "../components/UI/Label"
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import BasePage from "../components/Common/BasePage";
-import IssueTitle from "./Issue/IssueTitle";
-import IssueUserName from "./Issue/IssueUserName";
-import IssueCommentThreadLine from "./Issue/IssueCommentThreadLine";
-import IssueBody from "./Issue/IssueBody.module";
+import BasePage from "../components/Common/BasePage"
+import IssueTitle from "./Issue/IssueTitle"
+import IssueUserName from "./Issue/IssueUserName"
+import IssueCommentThreadLine from "./Issue/IssueCommentThreadLine"
+import IssueBody from "./Issue/IssueBody.module"
 
 export enum IssueType {
   ISSUE,

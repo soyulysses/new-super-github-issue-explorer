@@ -1,5 +1,5 @@
-import React, {Fragment} from "react";
-import BasePage from "../components/Common/BasePage";
+import React, {Fragment} from "react"
+import BasePage from "../components/Common/BasePage"
 
 const Search = () => {
   return (

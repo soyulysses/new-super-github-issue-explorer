@@ -1,6 +1,6 @@
-import React, {Fragment} from "react";
-import Label from "../../components/UI/Label";
-import classes from "./IssueUserName.module.css";
+import React, {Fragment} from "react"
+import Label from "../../components/UI/Label"
+import classes from "./IssueUserName.module.css"
 
 const IssueUserName = (props: any) => {
 
@@ -9,16 +9,16 @@ const IssueUserName = (props: any) => {
   switch (props.label) {
     case 'COLLABORATOR':
       color = '00ffb3'
-      break;
+      break
     case 'MEMBER':
       color = '009060'
-      break;
+      break
     case 'CONTRIBUTOR':
       color = '004D2E'
-      break;
+      break
     default:
       color = '808080'
-      break;
+      break
   }
 
   return (

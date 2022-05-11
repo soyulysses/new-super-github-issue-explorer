@@ -1,5 +1,5 @@
-import classes from "./Header.module.css";
-import React, {Fragment} from "react";
+import classes from "./Header.module.css"
+import React, {Fragment} from "react"
 
 const Header = (props: any) => {
   return (

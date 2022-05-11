@@ -1,6 +1,6 @@
-import React, {Fragment} from "react";
-import Header from "../UI/Header";
-import classes from "./BasePage.module.css";
+import React, {Fragment} from "react"
+import Header from "../UI/Header"
+import classes from "./BasePage.module.css"
 
 const BasePage = (props: any) => {
   return (

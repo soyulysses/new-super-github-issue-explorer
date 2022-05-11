@@ -1,5 +1,5 @@
-import React, {Fragment} from "react";
-import classes from "./IssueCommentThreadLine.module.css";
+import React, {Fragment} from "react"
+import classes from "./IssueCommentThreadLine.module.css"
 
 const IssueCommentThreadLine = () => {
   return (

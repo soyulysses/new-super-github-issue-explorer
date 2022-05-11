@@ -1,5 +1,5 @@
 import classes from './Label.module.css'
-import React from "react";
+import React from "react"
 
 const Label = (props: any) => {
 
