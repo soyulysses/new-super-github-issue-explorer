@@ -13,7 +13,7 @@
     flex-direction: column;
     gap: 24px;
     z-index: 1;
-    transition: background-color 200ms;
+    transition: background-color 250ms;
 }
 
 @keyframes card-appear {
@@ -29,7 +29,7 @@
 }
 
 .Card:hover {
-    background-color: rgb(59, 49, 49);
+    background-color: rgb(51, 35, 35);
     border-style: solid;
 }
 
@@ -41,7 +41,7 @@
 
 pre {
     overflow-x: auto;
-    background-color: rgba(255, 255, 255, 0.09);
+    background-color: rgba(255, 255, 255, 0.05);
     padding: 8px 10px;
     border-radius: 12px;
 }

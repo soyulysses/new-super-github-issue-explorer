@@ -1,6 +1,5 @@
 html {
-  font-size:14px;
-  box-sizing: border-box;
+  font-size: 14px;
 }
 
 #root {
@@ -61,4 +60,20 @@ a:visited {
 
 pre {
   overflow-x: scroll;
+}
+
+table, td, th {
+  border: 2px dotted #646464;
+  padding: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 16px;
+}
+
+::selection {
+  background-color: #3a866f;
+  color: white;
 }

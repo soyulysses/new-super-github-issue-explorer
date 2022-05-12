@@ -1,5 +1,5 @@
 import React, {Fragment} from "react"
-import Label from "../../components/UI/Label"
+import Label from "../../../components/UI/Label"
 import classes from "./IssueUserName.module.css"
 
 const IssueUserName = (props: any) => {
@@ -15,6 +15,9 @@ const IssueUserName = (props: any) => {
       break
     case 'CONTRIBUTOR':
       color = '004D2E'
+      break
+    case 'BOT':
+      color = '00D0FF'
       break
     default:
       color = '808080'
