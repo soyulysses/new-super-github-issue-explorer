@@ -29,17 +29,17 @@
     z-index: 2;
 }
 
-.header h1 {
+.header h2 {
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
 }
 
-.header h1 span {
+.header h2 span {
     color: #000000;
-    font-size: 16px;
+    font-size: 12px;
     background-color: #FFA500FF;
     padding: 3px 6px;
     border-radius: 4px;

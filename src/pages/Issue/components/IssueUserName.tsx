@@ -11,16 +11,16 @@ const IssueUserName = (props: any) => {
       color = '00ffb3'
       break
     case 'MEMBER':
-      color = '009060'
+      color = '00E3FF'
       break
     case 'CONTRIBUTOR':
-      color = '004D2E'
+      color = 'FFBE00'
       break
     case 'BOT':
       color = '00D0FF'
       break
     default:
-      color = '808080'
+      color = 'FFFFFF'
       break
   }
 

@@ -2,8 +2,8 @@
     font-size: 16px;
     flex: 1 1 0;
     padding: 16px;
-    border: 2px white solid;
-    border-radius: 99px;
+    border: 2px white dashed;
+    border-radius: 8px;
     width: 100%;
     background-color: rgba(255,255,255,0.15);
     color: #FFFFFF;
@@ -17,31 +17,34 @@
 
 
 .Button {
-    background: #ff6f61;
+    background: #ffffff;
     padding: 16px 32px;
     max-width: fit-content;
     border: none;
-    border-radius: 99px;
+    border-radius: 8px;
     cursor: pointer;
     flex: 1 1 0;
 }
 
 .Button[disabled] {
-    background: #ad4841;
+    background: #737373;
 }
 
 .Button:hover {
-    background: #ff4b3f;
+    background: #bdbdbd;
 }
 
 .Form {
+    width: initial;
     display: flex;
     gap: 12px;
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 512px){
     .Form {
         flex-direction: column;
+        padding: 0 32px;
+        width: 100%;
     }
 
     .Button {

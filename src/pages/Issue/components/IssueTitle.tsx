@@ -10,7 +10,7 @@ const IssueTitle = (props: any) => {
         <a href={props.url}>
           <Label solid square color={(props.type === IssueType.ISSUE) ? 'ff6f61' : '00a1ff'} name={(props.type === IssueType.ISSUE) ? '⚠️ Issue' : '📦 Pull Request'} />
           {' '}
-          {`${props.title} · ${props.date}`}
+          {(!!props.date) ? `${props.title} · ${props.date}` : `${props.title}`}
         </a>
       </h2>
     </Fragment>

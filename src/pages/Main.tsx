@@ -13,6 +13,7 @@ const Main = () => {
   return (
     <BasePage>
       <div className={classes.MainBody}>
+        <h1>SEARCH</h1>
         <MainSearchForm onSubmit={onSubmitSearch} />
       </div>
     </BasePage>

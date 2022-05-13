@@ -53,9 +53,9 @@ const SearchRepo = () => {
         return (
           <div key={`issue_${index}`} style={{cursor:'pointer'}} onClick={() => {navigate(`/issue/${userId}/${repoId}/${issue.number}`)}}>
             <Card>
-              <IssueTitle type={(!!issue.pull_request) ? IssueType.PULL : IssueType.ISSUE} title={issue.title} date={issue.created_at.substring(0, 10)} url={issue.html_url} />
+              <IssueTitle type={(!!issue.pull_request) ? IssueType.PULL : IssueType.ISSUE} title={issue.title} url={issue.html_url} />
               <div className={classes.IssueHeader}>
-                <IssueUserName label={issue.user.type.toUpperCase()} name={issue.user.login} />
+                <IssueUserName label={issue.user.type.toUpperCase()} name={`${issue.user.login} · ${issue.created_at.substring(0, 10)}`} />
                 <div className={classes.IssueLabels}>
                   {issue.labels.map((label:any, index:any) =>
                     <Label key={`${index}_label`} color={label.color} name={label.name} />
@@ -69,11 +69,11 @@ const SearchRepo = () => {
       })
     } />
       { (issuesList.length !== 0)
-        ?  <div style={{display: 'flex', justifyContent: 'center', paddingTop: '32px', gap: '32px'}}>
-            { (page !== '1') ? <Link style={{backgroundColor: "white", fontSize: '1.3rem', padding: '4px 32px', color: 'black', textDecoration: 'none', borderRadius: '99px'}} to={`/search/${userId}/${repoId}/1`}>{'❰❰'}</Link> : ''}
-            { (page !== '1') ? <Link style={{backgroundColor: "white", fontSize: '1.3rem', padding: '4px 32px', color: 'black', textDecoration: 'none', borderRadius: '99px'}} to={`/search/${userId}/${repoId}/${Number(page) - 1}`}>{'❰'}</Link> : ''}
-            { (page !== lastPage) ? <Link style={{backgroundColor: "white", fontSize: '1.3rem', padding: '4px 32px', color: 'black', textDecoration: 'none', borderRadius: '99px'}} to={`/search/${userId}/${repoId}/${Number(page) + 1}`}>{'❱'}</Link> : ''}
-            { (page !== lastPage) ? <Link style={{backgroundColor: "white", fontSize: '1.3rem', padding: '4px 32px', color: 'black', textDecoration: 'none', borderRadius: '99px'}} to={`/search/${userId}/${repoId}/${lastPage}`}>{'❱❱'}</Link> : ''}
+        ?  <div style={{display: 'flex', justifyContent: 'center', paddingTop: '32px', gap: '16px'}}>
+            { (page !== '1') ? <Link style={{backgroundColor: "white", fontSize: '1.3rem', padding: '4px 24px', color: 'black', textDecoration: 'none', borderRadius: '8px'}} to={`/search/${userId}/${repoId}/1`}>{'❰❰'}</Link> : ''}
+            { (page !== '1') ? <Link style={{backgroundColor: "white", fontSize: '1.3rem', padding: '4px 24px', color: 'black', textDecoration: 'none', borderRadius: '8px'}} to={`/search/${userId}/${repoId}/${Number(page) - 1}`}>{'❰'}</Link> : ''}
+            { (page !== lastPage) ? <Link style={{backgroundColor: "white", fontSize: '1.3rem', padding: '4px 24px', color: 'black', textDecoration: 'none', borderRadius: '8px'}} to={`/search/${userId}/${repoId}/${Number(page) + 1}`}>{'❱'}</Link> : ''}
+            { (page !== lastPage) ? <Link style={{backgroundColor: "white", fontSize: '1.3rem', padding: '4px 24px', color: 'black', textDecoration: 'none', borderRadius: '8px'}} to={`/search/${userId}/${repoId}/${lastPage}`}>{'❱❱'}</Link> : ''}
           </div>
         : ''
       }

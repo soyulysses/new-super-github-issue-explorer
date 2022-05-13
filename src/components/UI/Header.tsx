@@ -6,10 +6,10 @@ const Header = (props: any) => {
     <Fragment>
       <header className={classes.header}>
         <div className={classes.header_title}>
-          <h1>
+          <h2>
             <span>NEW SUPER</span>
             Github Issue Explorer
-          </h1>
+          </h2>
         </div>
         <div className={classes.header_body}>
           {props.children}
