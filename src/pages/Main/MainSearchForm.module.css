@@ -1,0 +1,50 @@
+.TextInput {
+    font-size: 16px;
+    flex: 1 1 0;
+    padding: 16px;
+    border: 2px white solid;
+    border-radius: 99px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.15);
+    color: #FFFFFF;
+    outline: none;
+}
+
+.TextInput:focus,
+.TextInput:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+
+
+.Button {
+    background: #ff6f61;
+    padding: 16px 32px;
+    max-width: fit-content;
+    border: none;
+    border-radius: 99px;
+    cursor: pointer;
+    flex: 1 1 0;
+}
+
+.Button[disabled] {
+    background: #ad4841;
+}
+
+.Button:hover {
+    background: #ff4b3f;
+}
+
+.Form {
+    display: flex;
+    gap: 12px;
+}
+
+@media screen and (max-width: 400px){
+    .Form {
+        flex-direction: column;
+    }
+
+    .Button {
+        max-width: 100%;
+    }
+}

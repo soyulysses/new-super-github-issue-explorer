@@ -38,7 +38,7 @@ type CommentModel = {
 }
 
 const Issue = () => {
-  const navegate = useNavigate();
+  const navigate = useNavigate();
   const {userId, repoId, issueId} = useParams();
   const [issue, setIssue] = useState<IssueModel | undefined>()
   const [commentList, setCommentList] = useState<CommentModel[] | undefined>()
@@ -51,7 +51,7 @@ const Issue = () => {
         const requestComments = await fetch(`https://api.github.com/repos/${userId}/${repoId}/issues/${issueId}/comments?per_page=100`)
         const dataComments = await requestComments.json()
 
-        if ((await dataIssue).length === 0) navegate('/error/404')
+        if ((await dataIssue).length === 0) navigate('/error/404')
 
           setIssue(
             {
@@ -73,7 +73,7 @@ const Issue = () => {
           }
         ))])
       } catch (e) {
-        navegate('/error/404')
+        navigate('/error/404')
       }
     }
 
@@ -83,7 +83,7 @@ const Issue = () => {
       setIssue(undefined)
       setCommentList(undefined)
     })
-  }, [userId, repoId, issueId, navegate])
+  }, [userId, repoId, issueId, navigate])
 
   return (
     <BasePage childrenHeader={<Link to={`/search/${userId}/${repoId}`} className={headerClasses.header_button}>‹ BACK</Link>}>

@@ -1,0 +1,14 @@
+.MainBody {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+
+    gap: 32px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}

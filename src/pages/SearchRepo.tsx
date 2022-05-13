@@ -9,7 +9,7 @@ import classes from "./Issue.module.css"
 import Label from "../components/UI/Label"
 import IssueUserName from "./Issue/components/IssueUserName"
 
-const Search = () => {
+const SearchRepo = () => {
   const navigate = useNavigate()
   const {userId, repoId, page = 1} = useParams()
   const [issuesList, setIssuesList] = useState<any[]>([])
@@ -80,4 +80,4 @@ const Search = () => {
   )
 }
 
-export default Search
+export default SearchRepo
