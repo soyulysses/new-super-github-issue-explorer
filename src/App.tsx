@@ -8,7 +8,7 @@ import Main from "./pages/Main"
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter  basename="/new-super-github-issue-explorer/">
       <Routes>
         <Route path='/' element={<Main />} />
         {/*<Route path="search/:userId" element={<SearchRepo />} />*/}
