@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/new-super-github-issue-explorer/static/css/main.cc9f1005.css",
-    "main.js": "/new-super-github-issue-explorer/static/js/main.8baa5316.js",
+    "main.js": "/new-super-github-issue-explorer/static/js/main.76c66bf0.js",
     "index.html": "/new-super-github-issue-explorer/index.html",
     "main.cc9f1005.css.map": "/new-super-github-issue-explorer/static/css/main.cc9f1005.css.map",
-    "main.8baa5316.js.map": "/new-super-github-issue-explorer/static/js/main.8baa5316.js.map"
+    "main.76c66bf0.js.map": "/new-super-github-issue-explorer/static/js/main.76c66bf0.js.map"
   },
   "entrypoints": [
     "static/css/main.cc9f1005.css",
-    "static/js/main.8baa5316.js"
+    "static/js/main.76c66bf0.js"
   ]
 }
