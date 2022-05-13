@@ -53,7 +53,7 @@ const Issue = () => {
 
         if ((await dataIssue).length === 0) navigate('/error/404')
 
-          setIssue(
+        setIssue(
             {
               title: await dataIssue.title,
               user_name: await dataIssue.user.login,

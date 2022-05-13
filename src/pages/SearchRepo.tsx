@@ -11,8 +11,9 @@ import IssueUserName from "./Issue/components/IssueUserName"
 
 const SearchRepo = () => {
   const navigate = useNavigate()
-  const {userId, repoId, page = 1} = useParams()
+  const {userId, repoId, page = '1'} = useParams()
   const [issuesList, setIssuesList] = useState<any[]>([])
+  const [lastPage, setLastPage] = useState<string>('-1')
 
   useEffect(() => {
     async function requestIssuesFromRepo() {
@@ -21,6 +22,10 @@ const SearchRepo = () => {
         const dataIssue = await requestIssue.json()
 
         if ((await dataIssue).length === 0) navigate('/error/404')
+
+        const requestRepo = await fetch(`https://api.github.com/repos/${userId}/${repoId}`)
+        const dataRepo = await requestRepo.json()
+        setLastPage('' + Math.ceil(await dataRepo.open_issues / 30))
 
         setIssuesList([...await dataIssue])
 
@@ -41,12 +46,6 @@ const SearchRepo = () => {
       <Fragment>
         <Link to='/' className={headerClasses.header_button}>‹ BACK</Link>
         <div className={headerClasses.filler} />
-        <ul style={{display: 'flex', gap: '16px', alignItems: 'center', color: 'white', fontSize: '1.25rem', padding: 0, listStyle: 'none'}}>
-          <li>{'DEBUG: '}</li>
-          <li style={{backgroundColor: 'rgba(255,255,255,.12)', padding: '4px 8px', borderRadius: '6px'}}>{(userId) ? '✔️ userId' : '❌ userId'}</li>
-          <li style={{backgroundColor: 'rgba(255,255,255,.12)', padding: '4px 8px', borderRadius: '6px'}}>{(repoId) ? '✔️ repoId' : '❌ repoId'}</li>
-          <li style={{backgroundColor: 'rgba(255,255,255,.12)', padding: '4px 8px', borderRadius: '6px'}}>{(page && page !== 1) ? '✔️ Page' : '❌ Page'}</li>
-        </ul>
       </Fragment>
     }>
     <div style={{display: 'flex', flexDirection: 'column', gap: '32px'}} children={
@@ -71,8 +70,10 @@ const SearchRepo = () => {
     } />
       { (issuesList.length !== 0)
         ?  <div style={{display: 'flex', justifyContent: 'center', paddingTop: '32px', gap: '32px'}}>
-            <Link style={{backgroundColor: "white", fontSize: '1.3rem', padding: '4px 32px', color: 'black', textDecoration: 'none', borderRadius: '99px'}} to={`/search/${userId}/${repoId}/${Number(page) - 1}`}>{'❰'}</Link>
-            <Link style={{backgroundColor: "white", fontSize: '1.3rem', padding: '4px 32px', color: 'black', textDecoration: 'none', borderRadius: '99px'}} to={`/search/${userId}/${repoId}/${Number(page) + 1}`}>{'❱'}</Link>
+            { (page !== '1') ? <Link style={{backgroundColor: "white", fontSize: '1.3rem', padding: '4px 32px', color: 'black', textDecoration: 'none', borderRadius: '99px'}} to={`/search/${userId}/${repoId}/1`}>{'❰❰'}</Link> : ''}
+            { (page !== '1') ? <Link style={{backgroundColor: "white", fontSize: '1.3rem', padding: '4px 32px', color: 'black', textDecoration: 'none', borderRadius: '99px'}} to={`/search/${userId}/${repoId}/${Number(page) - 1}`}>{'❰'}</Link> : ''}
+            { (page !== lastPage) ? <Link style={{backgroundColor: "white", fontSize: '1.3rem', padding: '4px 32px', color: 'black', textDecoration: 'none', borderRadius: '99px'}} to={`/search/${userId}/${repoId}/${Number(page) + 1}`}>{'❱'}</Link> : ''}
+            { (page !== lastPage) ? <Link style={{backgroundColor: "white", fontSize: '1.3rem', padding: '4px 32px', color: 'black', textDecoration: 'none', borderRadius: '99px'}} to={`/search/${userId}/${repoId}/${lastPage}`}>{'❱❱'}</Link> : ''}
           </div>
         : ''
       }
